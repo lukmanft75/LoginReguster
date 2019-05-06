@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, TextInput, View, Alert, Button, Text } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import ThirdScreen from './ThirdScreen';
-import styles from './Styles';
-
 
 class MainProject extends Component {
 	static navigationOptions =
@@ -54,6 +51,9 @@ class MainProject extends Component {
 					Alert.alert(responseJson);
 				}
 			/**end*/
+			
+			
+			
 		})
 		.catch((error) => {
 			console.error(error);
@@ -113,7 +113,6 @@ class SecondScreen extends Component{
 	}
 }
 
-/**
 class ThirdScreen extends Component{
 	static navigationOptions =
 	{
@@ -128,7 +127,26 @@ class ThirdScreen extends Component{
 		);
 	}
 }
+
+
+/**
+class LoginActivity extends Component {
+	static navigationOptions =
+	{
+		title: 'LoginActivity',
+	};
+	
+	constructor(props) {
+		super(props)
+		this.state = {
+			UserEmail: '',
+			UserPassword: ''
+		}
+	}  
+}
 */
+
+
 
 
 const RootStack = createStackNavigator(
@@ -143,9 +161,13 @@ const RootStack = createStackNavigator(
 );
 export default createAppContainer(RootStack);
 
-/**
 const styles = StyleSheet.create({
 	MainContainer :{
+		/**
+		justifyContent: 'center',
+		flex:1,
+		margin: 10
+		*/
 		flex: 1,
 		justifyContent: 'center',
 		backgroundColor : '#f5fcff',
@@ -171,6 +193,7 @@ const styles = StyleSheet.create({
 	},
 });
 
+/**
 AppRegistry.registerComponent('MainProject', () => MainProject);
 */
 
