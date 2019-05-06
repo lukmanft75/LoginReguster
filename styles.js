@@ -1,13 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-
-const styles = StyleSheet.create({
+export default styles = StyleSheet.create({
 	MainContainer :{
-		/**
-		justifyContent: 'center',
-		flex:1,
-		margin: 10
-		*/
 		flex: 1,
 		justifyContent: 'center',
 		backgroundColor : '#f5fcff',
@@ -31,4 +25,13 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		marginBottom: 10
 	},
+	MainButton: {
+		alignItems: 'center',
+		backgroundColor: '#f05555',
+		color: '#ffffff',
+		padding: 10,
+		marginTop: 16,
+		marginLeft: 35,
+		marginRight: 35
+	}
 });

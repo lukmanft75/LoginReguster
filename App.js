@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, TextInput, View, Alert, Button, Text } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
+import Styles from './styles';
+import ThirdScreen from './ThirdScreen';
+import SecondScreen from './SecondScreen';
+import MainProject from './MainProject';
+import home from './home';
 
+
+/**
 class MainProject extends Component {
 	static navigationOptions =
 	{
@@ -43,14 +50,14 @@ class MainProject extends Component {
 		.then((responseJson) => {
 			// Showing response message coming from server after inserting records.
 			// Alert.alert(responseJson);
-			/**start*/
+			//start
 				if(responseJson === 'Success'){
 					//Then open Profile activity and send user email to profile activity.
 					this.props.navigation.navigate('Third', { Email: UserEmail });
 				} else {
 					Alert.alert(responseJson);
 				}
-			/**end*/
+			//end
 			
 			
 			
@@ -129,7 +136,6 @@ class ThirdScreen extends Component{
 }
 
 
-/**
 class LoginActivity extends Component {
 	static navigationOptions =
 	{
@@ -149,8 +155,9 @@ class LoginActivity extends Component {
 
 const RootStack = createStackNavigator(
 	{
-		Home: MainProject,
-		Second: SecondScreen,
+		Home: home,
+		Login: SecondScreen,
+		Register: MainProject,
 		Third: ThirdScreen
 	},
 	{
@@ -159,13 +166,9 @@ const RootStack = createStackNavigator(
 );
 export default createAppContainer(RootStack);
 
+/**
 const styles = StyleSheet.create({
 	MainContainer :{
-		/**
-		justifyContent: 'center',
-		flex:1,
-		margin: 10
-		*/
 		flex: 1,
 		justifyContent: 'center',
 		backgroundColor : '#f5fcff',
@@ -191,7 +194,6 @@ const styles = StyleSheet.create({
 	},
 });
 
-/**
 AppRegistry.registerComponent('MainProject', () => MainProject);
 */
 
