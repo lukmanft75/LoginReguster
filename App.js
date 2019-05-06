@@ -147,8 +147,6 @@ class LoginActivity extends Component {
 */
 
 
-
-
 const RootStack = createStackNavigator(
 	{
 		Home: MainProject,
