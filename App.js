@@ -5,7 +5,9 @@ import Styles from './styles';
 import ThirdScreen from './ThirdScreen';
 import SecondScreen from './SecondScreen';
 import MainProject from './MainProject';
+import SplashScreen from './SplashScreen';
 import home from './home';
+import Login from './Login';
 
 
 /**
@@ -156,9 +158,10 @@ class LoginActivity extends Component {
 const RootStack = createStackNavigator(
 	{
 		Home: home,
-		Login: SecondScreen,
+		Login: Login,
 		Register: MainProject,
-		Third: ThirdScreen
+		Third: ThirdScreen,
+		SplashScreen: SplashScreen,
 	},
 	{
 		initialRouteName: "Home"

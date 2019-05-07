@@ -1,4 +1,4 @@
-#Mon May 06 09:15:42 WIB 2019
+#Tue May 07 08:10:59 WIB 2019
 base.0=/home/lukman/Documents/ProjectReactNative/20190415/LoginRegister/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
